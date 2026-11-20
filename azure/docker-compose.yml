@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: azure/Dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - DATABASE_URL=sqlite:///./riskwise.db
+      - JWT_SECRET_KEY=riskwise-ai-super-secret-key-2026-production-grade
+      - ARTIFACTS_DIR=backend/artifacts
+    volumes:
+      - ./backend/artifacts:/app/backend/artifacts
+      - ./backend/data:/app/backend/data
+
+  frontend:
+    build:
+      context: .
+      dockerfile: azure/Dockerfile.frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend

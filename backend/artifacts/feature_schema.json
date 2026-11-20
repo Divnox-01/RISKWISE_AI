@@ -1,0 +1,34 @@
+{
+  "feature_columns": [
+    "step",
+    "amount",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "type_CASH_IN",
+    "type_CASH_OUT",
+    "type_DEBIT",
+    "type_PAYMENT",
+    "type_TRANSFER",
+    "log_amount",
+    "log_oldbalanceOrg",
+    "log_oldbalanceDest",
+    "amount_to_oldbalance_ratio",
+    "is_orig_zero_init",
+    "is_dest_zero_init",
+    "orig_balance_drained",
+    "is_transfer_or_cashout",
+    "hour_of_day"
+  ],
+  "n_features": 18,
+  "categorical_columns": [
+    "type"
+  ],
+  "transaction_types": [
+    "CASH_IN",
+    "CASH_OUT",
+    "DEBIT",
+    "PAYMENT",
+    "TRANSFER"
+  ],
+  "created_at": "2026-11-20T16:36:23.006260"
+}

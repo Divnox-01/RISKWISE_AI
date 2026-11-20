@@ -1,0 +1,138 @@
+{
+  "model_version": "v2.0.0-prod",
+  "training_timestamp": "2026-11-20T16:36:23.007812",
+  "dataset_rows": 15000,
+  "train_rows": 10500,
+  "test_rows": 2250,
+  "features": [
+    "step",
+    "amount",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "type_CASH_IN",
+    "type_CASH_OUT",
+    "type_DEBIT",
+    "type_PAYMENT",
+    "type_TRANSFER",
+    "log_amount",
+    "log_oldbalanceOrg",
+    "log_oldbalanceDest",
+    "amount_to_oldbalance_ratio",
+    "is_orig_zero_init",
+    "is_dest_zero_init",
+    "orig_balance_drained",
+    "is_transfer_or_cashout",
+    "hour_of_day"
+  ],
+  "feature_importances": [
+    [
+      "amount",
+      0.5268
+    ],
+    [
+      "log_amount",
+      0.3058
+    ],
+    [
+      "oldbalanceOrg",
+      0.0488
+    ],
+    [
+      "amount_to_oldbalance_ratio",
+      0.0485
+    ],
+    [
+      "log_oldbalanceOrg",
+      0.0342
+    ],
+    [
+      "is_transfer_or_cashout",
+      0.0143
+    ],
+    [
+      "type_CASH_IN",
+      0.0048
+    ],
+    [
+      "orig_balance_drained",
+      0.0034
+    ],
+    [
+      "oldbalanceDest",
+      0.0028
+    ],
+    [
+      "is_dest_zero_init",
+      0.0021
+    ],
+    [
+      "type_CASH_OUT",
+      0.0018
+    ],
+    [
+      "type_PAYMENT",
+      0.0016
+    ],
+    [
+      "hour_of_day",
+      0.0016
+    ],
+    [
+      "log_oldbalanceDest",
+      0.0015
+    ],
+    [
+      "step",
+      0.001
+    ],
+    [
+      "type_TRANSFER",
+      0.001
+    ],
+    [
+      "type_DEBIT",
+      0.0
+    ],
+    [
+      "is_orig_zero_init",
+      0.0
+    ]
+  ],
+  "current_metrics": {
+    "xgb_pr_auc": 0.9987,
+    "xgb_roc_auc": 1.0,
+    "xgb_precision": 0.907,
+    "xgb_recall": 1.0,
+    "xgb_f1": 0.9512,
+    "xgb_confusion_matrix": [
+      [
+        2207,
+        4
+      ],
+      [
+        0,
+        39
+      ]
+    ],
+    "iso_forest_pr_auc": 0.4641,
+    "hybrid_pr_auc": 0.9994,
+    "hybrid_roc_auc": 1.0
+  },
+  "historical_reference_metrics": {
+    "xgb_pr_auc": 0.8809,
+    "xgb_roc_auc": 0.9972,
+    "xgb_precision": 0.69,
+    "xgb_recall": 0.85,
+    "iso_forest_pr_auc": 0.244,
+    "hybrid_pr_auc": 0.8826
+  },
+  "hybrid_weights": {
+    "xgboost": 0.6,
+    "isolation_forest": 0.25,
+    "rule_engine": 0.15
+  },
+  "thresholds": {
+    "medium_risk": 35.0,
+    "high_risk": 65.0
+  }
+}
