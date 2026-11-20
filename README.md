@@ -76,12 +76,7 @@ npm run dev
 ```
 Dashboard will be accessible at: `http://localhost:5173`
 
-### 4. Default Demo Credentials
-| Role | Email | Password |
-|---|---|---|
-| **Admin (CRO)** | `admin@riskwise.ai` | `Admin@123` |
-| **Lead Fraud Analyst** | `analyst@riskwise.ai` | `Analyst@123` |
-| **Compliance Auditor** | `auditor@riskwise.ai` | `Auditor@123` |
+
 
 ---
 
